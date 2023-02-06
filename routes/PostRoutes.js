@@ -19,7 +19,7 @@ router.route('/').get(async (req, res) => {
     const getAllPost = await ModelPost.find({});
 
     res.status(200).json({ success: true, data: getAllPost });
-  } catch (error) {
+  } catch (error) { 
     res.status(500).json({ success: false, message: error });
   }
 });
